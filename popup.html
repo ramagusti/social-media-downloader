@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="icons/icon48.png" alt="Logo" class="logo">
+      <h1>Social Downloader</h1>
+    </div>
+    
+    <div class="platform-info" id="platformInfo">
+      <span class="platform-badge" id="platformBadge">Unknown</span>
+    </div>
+
+    <div class="content-area">
+      <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <p>Finding media...</p>
+      </div>
+
+      <div id="mediaList" class="media-list">
+        <!-- Media items will be injected here -->
+      </div>
+
+      <div id="emptyState" class="empty-state">
+        <p>No media found on this page.</p>
+        <p class="hint">Navigate to a post with images or videos.</p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="refreshBtn" class="btn btn-secondary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/>
+        </svg>
+        Refresh
+      </button>
+      <button id="downloadAllBtn" class="btn btn-primary" disabled>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+        </svg>
+        Download All
+      </button>
+    </div>
+
+    <div class="footer">
+      <a href="#" id="settingsLink">Settings</a>
+      <span class="divider">|</span>
+      <span class="version">v1.0.0</span>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
