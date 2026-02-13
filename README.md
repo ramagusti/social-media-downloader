@@ -27,6 +27,12 @@ A Chrome extension to download videos and images from Instagram, TikTok, Twitter
 4. Click "Load unpacked"
 5. Select the extension folder
 
+### From GitHub
+
+1. Download the latest release from https://github.com/ramagusti/social-media-downloader/releases
+2. Extract the ZIP file
+3. Follow "From Source" instructions above
+
 ### From Chrome Web Store
 
 *Coming soon*
