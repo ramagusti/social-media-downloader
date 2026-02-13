@@ -1,4 +1,4 @@
-# Social Media Downloader
+# SnapFetch - Social Media Downloader
 
 A Chrome extension to download videos and images from Instagram, TikTok, Twitter/X, and Reddit.
 

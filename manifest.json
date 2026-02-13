@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Social Media Downloader",
+  "name": "SnapFetch - Social Media Downloader",
   "version": "1.0.0",
   "description": "Download videos and images from Instagram, TikTok, Twitter/X, and Reddit",
   "permissions": [
