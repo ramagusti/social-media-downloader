@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background: Hot Pink (Barbie style) -->
+  <rect x="0" y="0" width="512" height="512" rx="80" ry="80" fill="#e91e63"/>
+  
+  <!-- White Cursive -->
+  <text x="256" y="200" 
+        font-family="Brush Script MT, cursive" 
+        font-size="95" 
+        font-weight="bold" 
+        text-anchor="middle" 
+        fill="#ffffff"
+        style="font-style: italic;">Snap</text>
+  
+  <text x="256" y="300" 
+        font-family="Brush Script MT, cursive" 
+        font-size="95" 
+        font-weight="bold" 
+        text-anchor="middle" 
+        fill="#ffffff"
+        style="font-style: italic;">Fetch</text>
+  
+  <!-- Sparkle decorations -->
+  <text x="100" y="180" font-size="40" fill="#fff">✨</text>
+  <text x="380" y="320" font-size="40" fill="#fff">✨</text>
+  
+  <!-- Swirl underline -->
+  <path d="M 120 340 Q 180 360 256 340 Q 332 320 392 340" 
+        stroke="#ffffff" 
+        stroke-width="4" 
+        fill="none"
+        stroke-linecap="round"/>
+</svg>

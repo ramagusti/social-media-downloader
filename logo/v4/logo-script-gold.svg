@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background: Dark Navy -->
+  <rect x="0" y="0" width="512" height="512" rx="80" ry="80" fill="#1a237e"/>
+  
+  <!-- Gold/White Script -->
+  <text x="256" y="210" 
+        font-family="Brush Script MT, cursive" 
+        font-size="90" 
+        font-weight="normal" 
+        text-anchor="middle" 
+        fill="#ffd700"
+        style="font-style: italic;">Snap</text>
+  
+  <text x="256" y="300" 
+        font-family="Brush Script MT, cursive" 
+        font-size="90" 
+        font-weight="normal" 
+        text-anchor="middle" 
+        fill="#ffffff"
+        style="font-style: italic;">Fetch</text>
+  
+  <!-- Decorative underline -->
+  <path d="M 100 330 Q 256 360 412 330" 
+        stroke="#ffd700" 
+        stroke-width="4" 
+        fill="none"
+        stroke-linecap="round"/>
+</svg>

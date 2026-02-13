@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background: Classic Red -->
+  <rect x="0" y="0" width="512" height="512" rx="80" ry="80" fill="#c41e3a"/>
+  
+  <!-- White flowing script -->
+  <text x="256" y="200" 
+        font-family="Snell Roundhand, Brush Script MT, cursive" 
+        font-size="85" 
+        font-weight="normal" 
+        text-anchor="middle" 
+        fill="#ffffff"
+        style="font-style: italic;">Snap</text>
+  
+  <text x="256" y="310" 
+        font-family="Snell Roundhand, Brush Script MT, cursive" 
+        font-size="85" 
+        font-weight="normal" 
+        text-anchor="middle" 
+        fill="#ffffff"
+        style="font-style: italic;">Fetch</text>
+  
+  <!-- Classic wavy underline -->
+  <path d="M 100 340 Q 150 360 200 340 Q 250 320 300 340 Q 350 360 412 340" 
+        stroke="#ffffff" 
+        stroke-width="4" 
+        fill="none"
+        stroke-linecap="round"/>
+</svg>
