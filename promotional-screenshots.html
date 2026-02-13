@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapFetch - Promotional Screenshots</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f0f2f5;
+            padding: 40px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+        
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+            gap: 30px;
+        }
+        
+        .screenshot-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .screenshot-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+        
+        .mockup-container {
+            padding: 30px;
+            background: #f8f9fa;
+        }
+        
+        /* Browser Mockup */
+        .browser-mockup {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .browser-header {
+            background: #e9ecef;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .browser-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .browser-dot.red { background: #ff5f56; }
+        .browser-dot.yellow { background: #ffbd2e; }
+        .browser-dot.green { background: #27c93f; }
+        
+        .browser-url {
+            flex: 1;
+            background: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #666;
+            margin-left: 10px;
+        }
+        
+        .browser-content {
+            padding: 20px;
+            min-height: 200px;
+            background: #fafafa;
+        }
+        
+        /* Extension Popup Mockup */
+        .extension-popup {
+            width: 380px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        
+        .popup-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .popup-logo {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        
+        .popup-title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .platform-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background: #fce4ec;
+            color: #c2185b;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin: 12px 20px;
+        }
+        
+        .media-list {
+            padding: 0 20px 20px;
+        }
+        
+        .media-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .media-thumb {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        
+        .media-info {
+            flex: 1;
+        }
+        
+        .media-type {
+            font-size: 11px;
+            color: #667eea;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .media-name {
+            font-size: 13px;
+            color: #495057;
+            margin-top: 4px;
+        }
+        
+        .download-btn {
+            width: 36px;
+            height: 36px;
+            background: #667eea;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .popup-actions {
+            display: flex;
+            gap: 12px;
+            padding: 16px 20px;
+            background: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #e9ecef;
+            color: #495057;
+        }
+        
+        /* Feature Highlights */
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            padding: 20px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+        
+        .feature-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
+        .screenshot-label {
+            text-align: center;
+            padding: 15px;
+            background: #f8f9fa;
+            color: #666;
+            font-size: 14px;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        /* Platform-specific styles */
+        .instagram-theme .platform-badge { background: #fce4ec; color: #c2185b; }
+        .tiktok-theme .platform-badge { background: #e3f2fd; color: #1976d2; }
+        .twitter-theme .platform-badge { background: #e8f5e9; color: #388e3c; }
+        .reddit-theme .platform-badge { background: #fff3e0; color: #f57c00; }
+        
+        .instructions {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .instructions h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .instructions ol {
+            padding-left: 20px;
+            line-height: 2;
+            color: #555;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📸 SnapFetch - Promotional Screenshots</h1>
+        
+        <div class="screenshot-grid">
+            <!-- Screenshot 1: Main Interface -->
+            <div class="screenshot-card instagram-theme">
+                <div class="screenshot-header">Screenshot 1: Main Popup Interface</div>
+                <div class="mockup-container">
+                    <div class="extension-popup">
+                        <div class="popup-header">
+                            <div class="popup-logo">⬇️</div>
+                            <div class="popup-title">SnapFetch</div>
+                        </div>
+                        <span class="platform-badge">Instagram</span>
+                        <div class="media-list">
+                            <div class="media-item">
+                                <div class="media-thumb">🖼️</div>
+                                <div class="media-info">
+                                    <div class="media-type">Image</div>
+                                    <div class="media-name">instagram_image_2026-02-13_1.jpg</div>
+                                </div>
+                                <button class="download-btn">⬇️</button>
+                            </div>
+                            <div class="media-item">
+                                <div class="media-thumb">🖼️</div>
+                                <div class="media-info">
+                                    <div class="media-type">Image</div>
+                                    <div class="media-name">instagram_image_2026-02-13_2.jpg</div>
+                                </div>
+                                <button class="download-btn">⬇️</button>
+                            </div>
+                            <div class="media-item">
+                                <div class="media-thumb">🎬</div>
+                                <div class="media-info">
+                                    <div class="media-type">Video</div>
+                                    <div class="media-name">instagram_video_2026-02-13_1.mp4</div>
+                                </div>
+                                <button class="download-btn">⬇️</button>
+                            </div>
+                        </div>
+                        <div class="popup-actions">
+                            <button class="btn btn-secondary">Refresh</button>
+                            <button class="btn btn-primary">Download All</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="screenshot-label">Main popup showing detected media on Instagram post</div>
+            </div>
+            
+            <!-- Screenshot 2: Multi-Platform Support -->
+            <div class="screenshot-card">
+                <div class="screenshot-header">Screenshot 2: Supported Platforms</div>
+                <div class="mockup-container">
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">📷</div>
+                            <div><strong>Instagram</strong><br>Photos & Videos</div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🎵</div>
+                            <div><strong>TikTok</strong><br>Videos</div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🐦</div>
+                            <div><strong>Twitter/X</strong><br>Images & Videos</div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🤖</div>
+                            <div><strong>Reddit</strong><br>Posts & Media</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="screenshot-label">Works with all major social platforms</div>
+            </div>
+            
+            <!-- Screenshot 3: TikTok Theme -->
+            <div class="screenshot-card tiktok-theme">
+                <div class="screenshot-header">Screenshot 3: TikTok Video Download</div>
+                <div class="mockup-container">
+                    <div class="extension-popup">
+                        <div class="popup-header">
+                            <div class="popup-logo">⬇️</div>
+                            <div class="popup-title">SnapFetch</div>
+                        </div>
+                        <span class="platform-badge">TikTok</span>
+                        <div class="media-list">
+                            <div class="media-item">
+                                <div class="media-thumb">🎬</div>
+                                <div class="media-info">
+                                    <div class="media-type">Video (HD)</div>
+                                    <div class="media-name">tiktok_video_2026-02-13_1.mp4</div>
+                                </div>
+                                <button class="download-btn">⬇️</button>
+                            </div>
+                        </div>
+                        <div style="padding: 20px; text-align: center; color: #666; font-size: 14px;">
+                            ✅ Video ready for download without watermark!
+                        </div>
+                        <div class="popup-actions">
+                            <button class="btn btn-secondary">Refresh</button>
+                            <button class="btn btn-primary">Download</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="screenshot-label">Downloading TikTok videos in high quality</div>
+            </div>
+            
+            <!-- Screenshot 4: Twitter/X Theme -->
+            <div class="screenshot-card twitter-theme">
+                <div class="screenshot-header">Screenshot 4: Twitter/X Media</div>
+                <div class="mockup-container">
+                    <div class="extension-popup">
+                        <div class="popup-header">
+                            <div class="popup-logo">⬇️</div>
+                            <div class="popup-title">SnapFetch</div>
+                        </div>
+                        <span class="platform-badge">Twitter/X</span>
+                        <div class="media-list">
+                            <div class="media-item">
+                                <div class="media-thumb">🖼️</div>
+                                <div class="media-info">
+                                    <div class="media-type">Image (4K)</div>
+                                    <div class="media-name">twitter_image_2026-02-13_1.jpg</div>
+                                </div>
+                                <button class="download-btn">⬇️</button>
+                            </div>
+                            <div class="media-item">
+                                <div class="media-thumb">🖼️</div>
+                                <div class="media-info">
+                                    <div class="media-type">Image (4K)</div>
+                                    <div class="media-name">twitter_image_2026-02-13_2.jpg</div>
+                                </div>
+                                <button class="download-btn">⬇️</button>
+                            </div>
+                            <div class="media-item">
+                                <div class="media-thumb">🎬</div>
+                                <div class="media-info">
+                                    <div class="media-type">Video</div>
+                                    <div class="media-name">twitter_video_2026-02-13_1.mp4</div>
+                                </div>
+                                <button class="download-btn">⬇️</button>
+                            </div>
+                            <div class="media-item">
+                                <div class="media-thumb">🖼️</div>
+                                <div class="media-info">
+                                    <div class="media-type">Image (4K)</div>
+                                    <div class="media-name">twitter_image_2026-02-13_3.jpg</div>
+                                </div>
+                                <button class="download-btn">⬇️</button>
+                            </div>
+                        </div>
+                        <div class="popup-actions">
+                            <button class="btn btn-secondary">Refresh</button>
+                            <button class="btn btn-primary">Download All (4)</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="screenshot-label">Download all images from a Twitter/X gallery</div>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h2>📋 Screenshot Requirements for Chrome Web Store</h2>
+            <ol>
+                <li><strong>Size:</strong> Screenshots must be 1280x800 or 640x400 pixels</li>
+                <li><strong>Format:</strong> PNG or JPEG</li>
+                <li><strong>Content:</strong> Show the extension in action on real websites</li>
+                <li><strong>Quantity:</strong> Minimum 1, recommended 3-5 screenshots</li>
+                <li><strong>Captions:</strong> Each screenshot should clearly show what the extension does</li>
+                <li><strong>No Promotional Text:</strong> Don't add marketing text to screenshots themselves</li>
+            </ol>
+            
+            <h2 style="margin-top: 30px;">🎯 Recommended Screenshot Strategy</h2>
+            <ol>
+                <li><strong>Screenshot 1:</strong> Main popup showing Instagram download (most popular)</li>
+                <li><strong>Screenshot 2:</strong> TikTok video download (high demand feature)</li>
+                <li><strong>Screenshot 3:</strong> Twitter/X gallery download (shows multiple files)</li>
+                <li><strong>Screenshot 4:</strong> Right-click context menu (alternative usage)</li>
+                <li><strong>Screenshot 5:</strong> Settings/preferences (if applicable)</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
