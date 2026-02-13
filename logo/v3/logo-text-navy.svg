@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background: Deep Navy -->
+  <rect x="0" y="0" width="512" height="512" rx="80" ry="80" fill="#1a1a2e"/>
+  
+  <!-- SnapFetch Text -->
+  <text x="256" y="220" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="72" font-weight="700" text-anchor="middle" fill="white">Snap</text>
+  <text x="256" y="300" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="72" font-weight="700" text-anchor="middle" fill="#4A90D9">Fetch</text>
+  
+  <!-- Small download arrow below -->
+  <g transform="translate(256, 380)">
+    <polygon points="0,20 -15,0 15,0" fill="#4A90D9"/>
+    <rect x="-3" y="-25" width="6" height="25" fill="#4A90D9"/>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background: Coral/Salmon -->
+  <rect x="0" y="0" width="512" height="512" rx="80" ry="80" fill="#e17055"/>
+  
+  <!-- White Circle -->
+  <circle cx="256" cy="256" r="180" fill="white"/>
+  
+  <!-- SnapFetch Text -->
+  <text x="256" y="230" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="60" font-weight="800" text-anchor="middle" fill="#2d3436">Snap</text>
+  <text x="256" y="295" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="60" font-weight="800" text-anchor="middle" fill="#e17055">Fetch</text>
+  
+  <!-- Small arrow -->
+  <g transform="translate(256, 345)">
+    <polygon points="0,12 -10,-3 10,-3" fill="#2d3436"/>
+    <rect x="-2" y="-18" width="4" height="15" fill="#2d3436"/>
+  </g>
+</svg>
